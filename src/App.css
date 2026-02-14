@@ -1,38 +1,230 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Montserrat", "Poppins", sans-serif;
+}
+
+body {
+  top: 0 !important;
+  background: linear-gradient(to right, #f8f9fa, #eef2f7);
+}
+
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.product-card {
+  height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.product-img {
+  height: 220px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
+  margin: 5px;
+  border-radius: 0;
+}
+
+.navbar-brand {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #ffc107 !important;
+  letter-spacing: 1px;
+}
+
+.navbar .btn-warning {
+  font-weight: bold;
+  border-radius: 20px;
+}
+
+.navbar .form-control {
+  border-radius: 20px;
+}
+
+.navbar .form-control:focus {
+  box-shadow: none;
+  border-color: #ffc107;
+}
+
+#mainCarousel {
+  max-width: 1200px;
+  margin: 20px auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+#mainCarousel img {
+  height: 450px;
+  object-fit: cover;
+}
+
+.product-card {
+  border-radius: 20px;
+  overflow: hidden;
+  border: none;
+  transition: all 0.4s ease;
+  background: #ffffff;
+}
+
+.product-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+.image-wrapper {
+  height: 220px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #f8f9fa;
+  padding: 10px;
+}
+
+.image-wrapper img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.card-img-top {
+  height: 220px;
+  width: 100%;
+  object-fit: contain; /* change from cover → contain */
+  background-color: #f8f9fa;
+  padding: 10px;
+}
+
+.product-card:hover .card-img-top {
+  transform: scale(1.08);
+}
+
+.card-title {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #28a745;
+}
+
+.add-btn {
+  background: linear-gradient(45deg, #ffc107, #ff9800);
+  color: #000;
+  border: none;
+  border-radius: 30px;
+  padding: 10px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.add-btn:hover {
+  transform: scale(1.07);
+  box-shadow: 0 8px 20px rgba(255, 193, 7, 0.4);
+}
+
+.buy-btn {
+  background: linear-gradient(45deg, #0d6efd, #6610f2);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 10px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.buy-btn:hover {
+  transform: scale(1.07);
+  box-shadow: 0 8px 20px rgba(13, 110, 253, 0.4);
+}
+
+.btn-outline-dark {
+  border-radius: 30px !important;
+  padding: 8px 18px !important;
+  transition: 0.3s ease;
+}
+
+.btn-outline-dark:hover {
+  background-color: #212529;
+  color: white;
+  transform: scale(1.05);
+}
+
+.modal-content {
+  border-radius: 20px;
+  overflow: hidden;
+  border: none;
+  animation: fadeInScale 0.3s ease-in-out;
+}
+
+.modal-header {
+  background: linear-gradient(90deg, #0d6efd, #6610f2);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.modal-footer .btn {
+  border-radius: 20px;
 }
 
-@keyframes App-logo-spin {
+@keyframes fadeInScale {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: scale(0.95);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 992px) {
+  #mainCarousel img {
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  #mainCarousel img {
+    height: 280px;
+  }
+
+  .product-card {
+    margin-bottom: 20px;
+  }
+
+  .navbar {
+    margin: 5px;
+  }
+}
+
+@media (max-width: 576px) {
+  #mainCarousel img {
+    height: 220px;
+  }
+
+  .card-img-top {
+    height: 180px;
+  }
+
+  .price {
+    font-size: 18px;
   }
 }
