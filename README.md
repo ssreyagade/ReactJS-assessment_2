@@ -15,12 +15,6 @@
 - Smooth hover animations on product cards
 - Mobile-friendly layout
 
-### 🖼️ Optimized Product Images
-- Proper image fitting using `object-fit: contain`
-- Fixed image height for consistent card design
-- Supports both vertical (Watches) and horizontal (Shoes, Phones) images
-- Equal card sizing across all categories
-
 ### ✨ Scroll Animations (AOS Integration)
 - Smooth scroll animations using AOS (Animate On Scroll)
 - Animated Navbar, Carousel, Section Titles, Buttons, and Product Cards
