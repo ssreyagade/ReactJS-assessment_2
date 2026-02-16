@@ -50,7 +50,7 @@ class App extends Component {
         products: selectedProducts,
       },
       () => {
-        AOS.refresh(); // 🔥 refresh animation after category change
+        AOS.refresh(); 
       },
     );
   };
@@ -97,7 +97,7 @@ class App extends Component {
 
     return (
       <>
-        {/* 🔥 NAVBAR */}
+        {/* NAVBAR */}
         <div data-aos="fade-down">
           <Navbar
             cartCount={this.state.cart.length}
@@ -105,7 +105,7 @@ class App extends Component {
           />
         </div>
 
-        {/* 🔥 CAROUSEL */}
+        {/*  CAROUSEL */}
         <div data-aos="zoom-in">
           <CarouselComponent />
         </div>
@@ -119,7 +119,7 @@ class App extends Component {
           }}
         >
           <div id="allcat" className="container">
-            {/* 🔥 SECTION TITLE */}
+            {/*  SECTION TITLE */}
             <h1
               className="text-center mb-3"
               style={{ color: currentStyle.text }}
@@ -139,7 +139,7 @@ class App extends Component {
               }}
             ></div>
 
-            {/* 🔥 CATEGORY BUTTONS */}
+            {/*  CATEGORY BUTTONS */}
             <div className="text-center mb-4" data-aos="fade-up">
               {categories.map((category) => (
                 <button
@@ -163,7 +163,7 @@ class App extends Component {
               ))}
             </div>
 
-            {/* 🔥 PRODUCTS GRID */}
+            {/*  PRODUCTS GRID */}
             <div id="phone" className="row">
               {this.state.products.length > 0 ? (
                 this.state.products.map((product, index) => (
